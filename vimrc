@@ -102,5 +102,9 @@ set sidescroll=1
 set background=light
 colorscheme solarized
 
+"Colors for indent
+hi IndentGuidesOdd  ctermbg=white
+hi IndentGuidesEven ctermbg=lightgrey
+
 source ~/.vim/vundles
 source ~/.vim/alias
