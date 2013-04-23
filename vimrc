@@ -98,7 +98,11 @@ set wildignore+=*.png,*.jpg,*.gif
 set scrolloff=8         "Start scrolling when we're 8 lines away from margin
 set sidescrolloff=15
 set sidescroll=1
+"============== IGNORE ctrlP  ======================
 
+let g:ctrlp_custom_ignore = '\.git$\|\.DS_Store$\|.*\.class$'
+
+"============== THEME  ===========================
 set background=light
 colorscheme solarized
 
