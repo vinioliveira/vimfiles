@@ -101,6 +101,7 @@ set sidescroll=1
 "============== IGNORE ctrlP  ======================
 
 let g:ctrlp_custom_ignore = '\.git$\|\.DS_Store$\|.*\.class$'
+let g:ctrlp_custom_ignore = 'vendor/bundle'
 
 "============== THEME  ===========================
 set background=light
