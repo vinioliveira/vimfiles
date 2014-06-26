@@ -1,25 +1,28 @@
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion' 
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'vim-ruby/vim-ruby'
-
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+" Syntax checking 
+Bundle 'scrooloose/syntastic' 
+" Lean & mean status/tabline
+Bundle 'bling/vim-airline' 
+" file-type sensible comments for Vim
+Bundle 'tomtom/tcomment_vim' 
+" Bundle 'ack.vim'
+" Suround by the command 
+Bundle 'tpope/vim-surround' 
+" This plug-in provides automatic closing of quotes
+Bundle 'Raimondi/delimitMate' 
+" For identation 
+Bundle 'nathanaelkane/vim-indent-guides' 
+" Make js beautiful 
+Bundle 'michalliu/sourcebeautify.vim' 
+" HTML made easy 
+Bundle 'rstacruz/sparkup' 
 Bundle 'scrooloose/nerdtree.git'
-Bundle 'skwp/vim-powerline.git'
-Bundle 'bufexplorer.zip'
+" For auto compleation
+Bundle 'Shougo/neocomplcache' 
 Bundle 'ctrlp.vim'
+" Bundle 'skwp/vim-powerline.git'
+Bundle 'bufexplorer.zip'
+Bundle 'vim-coffee-script'
 
-"Themest://github.com/
-Bundle 'altercation/vim-colors-solarized.git'
-Bundle 'scrooloose/syntastic'
-Bundle 'astashov/vim-ruby-debugger'
-Bundle 'better-snipmate-snippet'
-Bundle 'Shougo/neocomplcache'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'ack.vim'
-Bundle 'groovy.vim'
+" Themest://github.com/
+Bundle 'sjl/badwolf'
+

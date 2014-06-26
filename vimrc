@@ -1,8 +1,9 @@
 set nocompatible               " be iMproved
-filetype off                   " required!
+filetype off                   " required by vundle
 
 set rtp+=~/.vim/vundle/
 call vundle#rc()
+
 "reuired
 Bundle 'gmarik/vundle'
 
@@ -104,8 +105,8 @@ let g:ctrlp_custom_ignore = '\.git$\|\.DS_Store$\|.*\.class$'
 let g:ctrlp_custom_ignore = 'vendor/bundle'
 
 "============== THEME  ===========================
-set background=light
-colorscheme solarized
+"set background=light
+colorscheme github 
 
 "Colors for indent
 hi IndentGuidesOdd  ctermbg=white
