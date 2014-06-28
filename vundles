@@ -22,7 +22,12 @@ Bundle 'ctrlp.vim'
 " Bundle 'skwp/vim-powerline.git'
 Bundle 'bufexplorer.zip'
 Bundle 'vim-coffee-script'
+Bundle 'tpope/vim-fugitive'
 
 " Themest://github.com/
 Bundle 'sjl/badwolf'
 
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'

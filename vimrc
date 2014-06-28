@@ -1,34 +1,18 @@
 set nocompatible               " be iMproved
 filetype off                   " required by vundle
 
-set rtp+=~/.vim/vundle/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+source ~/.vim/vundles
 
-"reuired
-Bundle 'gmarik/vundle'
 
-filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+filetype plugin indent on     " required! should be here at this line otherwise syntaxe for coffee script won't work
+syntax on
 
-"
-" PERSONAL Vim configs
-"
 
-let g:Powerline_symbols = 'fancy'
+" ================ Basic Settings  =================
 
-syntax enable
-set tabstop=2
 "let mapleader = '\'
-
-
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
@@ -37,13 +21,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
-
-
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
 set hidden
-
 set laststatus=2                "It enabled powerline to be present always
 
 " ================ Search Settings  =================
@@ -59,8 +37,6 @@ set nobackup
 set nowb
 
 " ================ Persistent Undo ==================
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
 
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
@@ -75,7 +51,6 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
-
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
@@ -94,23 +69,38 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
+" ================= COPY to ClipBoard ==============
+" In visual mode, use Y to copy to system clipboard
+vnoremap Y "*y
+
+" " In normal mode, do the same with the current line
+nnoremap Y "*yy
+set clipboard=unnamed           "To copy to clipboard
+
 " ================ Scrolling ========================
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margin
 set sidescrolloff=15
 set sidescroll=1
+
 "============== IGNORE ctrlP  ======================
 
-let g:ctrlp_custom_ignore = '\.git$\|\.DS_Store$\|.*\.class$'
-let g:ctrlp_custom_ignore = 'vendor/bundle'
+let g:ctrlp_custom_ignore ='\.git$\|\.DS_Store$\|.*\.class$|node_modules\|DS_Store|vendor/bundle'
 
 "============== THEME  ===========================
-"set background=light
-colorscheme github 
+"
+set background=dark
+colorscheme badwolf 
+
+"============== AIR LINE ===========================
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'badwolf'
+let g:airline_section_warning = ''
+let g:airline_inactive_collapse = 0
 
 "Colors for indent
 hi IndentGuidesOdd  ctermbg=white
 hi IndentGuidesEven ctermbg=lightgrey
 
-source ~/.vim/vundles
 source ~/.vim/alias
